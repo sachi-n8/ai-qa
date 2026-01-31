@@ -1,0 +1,7 @@
+frontend:
+  build: ./ai-qa-frontend
+  container_name: aiqa-frontend
+  ports:
+    - "3000:80"
+  depends_on:
+    - backend

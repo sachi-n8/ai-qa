@@ -1,0 +1,165 @@
+/* ===== PAGE BACKGROUND ===== */
+.upload-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #a855f7,
+    #ec4899
+  );
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, sans-serif;
+}
+
+/* ===== CARD ===== */
+.upload-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  border-radius: 24px;
+  padding: 32px;
+  text-align: center;
+  animation: floatIn 0.4s ease-out;
+}
+
+/* Glow */
+.upload-glow {
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(99, 102, 241, 0.25);
+}
+
+/* ===== ICON ===== */
+.upload-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: #4f46e5;
+  background: #eef2ff;
+  padding: 16px;
+  border-radius: 50%;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== TEXT ===== */
+.upload-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.upload-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* ===== FILE INPUT ===== */
+.file-box {
+  display: block;
+  border: 2px dashed #a5b4fc;
+  border-radius: 16px;
+  padding: 28px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.file-box:hover {
+  background: rgba(99, 102, 241, 0.08);
+  border-color: #6366f1;
+}
+
+.file-name {
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+.file-placeholder {
+  color: #6b7280;
+}
+
+/* ===== BUTTON ===== */
+.upload-btn {
+  width: 100%;
+  margin-top: 24px;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s ease;
+}
+
+.upload-btn:hover {
+  background: #4338ca;
+}
+
+.upload-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Shine effect */
+.upload-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: translateX(-100%);
+}
+
+.upload-btn:hover::after {
+  transform: translateX(100%);
+  transition: transform 0.6s ease;
+}
+
+/* ===== MESSAGE ===== */
+.upload-message {
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* ===== BACK LINK ===== */
+.back-link {
+  margin-top: 24px;
+  font-size: 14px;
+  color: #4f46e5;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
